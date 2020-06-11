@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div class="form-control">
+        <input id="textInput" class="text-input" onchange="textChangeHandler()" />
+        <p class="error-message" id="error-message"></p>
+    </div>
+    <div class="button-controls">
+        <button class="button add-button" onclick="addHandler()">Add</button>
+        <button class="button search-button" onclick="searchHandler()">Search</button>
+        <button class="button search-button" onclick="resetHandler()">Reset</button>
+    </div>
+    <div class="button-controls">
+        <input id="ascending" name="sort" type="radio" value="asc" />
+        <label for="ascending">Ascending</label>
+        <input id="descending" name="sort" type="radio" value="desc" />
+        <label for="descending">Descending</label>
+        <input id="none" name="sort" type="radio" value="none" checked />
+        <label for="none">None</label>
+        <button class="button sort-button" onclick="sortHandler()">Sort</button>
+    </div>
+
+    <ul id="list-items"></ul>
+
+</body>
+<style>
+    .form-control {
+        width: 100%;
+    }
+
+    .text-input {
+        height: 20px;
+    }
+
+    .error-message{
+        color: red;
+        margin: 0;
+    }
+
+    .add-button {
+        height: 20px;
+        background: #03ff2e;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .add-button:hover {
+        background: #23ce57;
+    }
+
+    .button-controls{
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #list-items{
+        list-style: none;
+        width: 200px;  
+        position: relative;
+    }
+
+    #list-items > li {           
+        border-bottom: 1px solid #ccc;
+    }
+
+    .list{
+        display: inline-block;
+        width: 180px;
+    }
+
+    .remove {
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+    .remove:hover {
+        background: #ccc;
+    }
+</style>
+<script src="./activity.js" type="text/javascript"></script>
+
+</html>
